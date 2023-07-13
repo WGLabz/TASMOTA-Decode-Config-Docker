@@ -6,7 +6,7 @@ from watchdog.events import FileSystemEventHandler
 
 class OnMyWatch:
 	# Set the directory on watch
-	watchDirectory = ""
+	watchDirectory = "/usr/src/app"
 
 	def __init__(self):
 		self.observer = Observer()
