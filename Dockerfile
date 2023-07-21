@@ -8,4 +8,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY decode-config.py .
 COPY watch_and_process.py .
 
-ENTRYPOINT [ "python", "watch_and_process.py" ]
+ENTRYPOINT [ "python","-u", "watch_and_process.py" ]

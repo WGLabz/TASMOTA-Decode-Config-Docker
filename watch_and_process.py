@@ -3,10 +3,9 @@ import time
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
-
 class OnMyWatch:
 	# Set the directory on watch
-	watchDirectory = "/usr/src/app"
+	watchDirectory = "/filessource"
 
 	def __init__(self):
 		self.observer = Observer()
@@ -24,21 +23,18 @@ class OnMyWatch:
 
 		self.observer.join()
 
-
 class Handler(FileSystemEventHandler):
 
 	@staticmethod
 	def on_any_event(event):
+		print(event)
 		if event.is_directory:
 			return None
 
-		elif event.event_type == 'created':
-			# Event is created, you can process it now
-			print("Watchdog received created event - % s." % event.src_path)
-		elif event.event_type == 'modified':
-			# Event is modified, you can process it now
-			print("Watchdog received modified event - % s." % event.src_path)
+		elif event.event_type == 'created' or event.event_type == 'modified':
 			
+
+			print("Watchdog received created event - % s." % event.src_path)
 
 if __name__ == '__main__':
 	watch = OnMyWatch()

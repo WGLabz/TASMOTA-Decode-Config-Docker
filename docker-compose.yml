@@ -1,8 +1,8 @@
 version: "3.2"
 services:
   tasmo-decode-config:
-    image: bikash/tasmota-decode-config
+    build: .
     container_name: tasmo-decode-config
     restart: unless-stopped
     volumes:
-      - "./data:/usr/src/app"
+      - "./data:/filessource"
