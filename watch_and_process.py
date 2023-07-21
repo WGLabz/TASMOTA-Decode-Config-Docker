@@ -1,8 +1,9 @@
 # import time module, Observer, FileSystemEventHandler
-import time
+import time # Import Time
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 import os
+
 class OnMyWatch:
 	# Set the directory on watch
 	watchDirectory = "/filessource"
