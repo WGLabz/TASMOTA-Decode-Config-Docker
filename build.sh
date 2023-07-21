@@ -11,6 +11,11 @@ cp ./decodec/decode-config.py .
 # cp watch_and_process.py ./data
 sudo rm -R ./decodec
 echo -e '\nwatchdog' >> requirements.txt
-docker build . --tag bikash/tasmota-decode-config
+
+# mkdir ./date/source
+# mkdir ./data/output
+# docker build . --tag bikash/tasmota-decode-config
 # echo "Running the container"
 # docker run -v ./data:/usr/src/app bikash/tasmota-decode-config #-s Config_pir1_1255_13.0.0.dmp -o Config.json
+
+docker-compose up --build --detach

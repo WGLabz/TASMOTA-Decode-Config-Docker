@@ -5,4 +5,5 @@ services:
     container_name: tasmo-decode-config
     restart: unless-stopped
     volumes:
-      - "./data:/filessource"
+      - "./data/source:/filessource"
+      - "./data/output:/filedestination"
