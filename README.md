@@ -10,8 +10,13 @@ You can put the `.dmp` file backed  up from the TASMOTA device into `data/source
 
 > This project depends/uses [decode-config](https://github.com/tasmota/decode-config) repository
 <br />
+
 You can also checkout the complete video on this, 
+
 <br />
+
 <a href="https://bit.ly/3Q85tW4">
-![](git_image.PNG)
+
+  ![Image](git_image.PNG)
+  
 </a>
